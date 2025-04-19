@@ -3,90 +3,116 @@
 }
 html ,body{
     margin:0;
+    padding: 0;
     height:100%;
     width:100%;
-    direction:rtl;
 }
 body{
     font-family: 'Vazirmatn-Regular'!important;
+    overflow-x: hidden;
 }
+.row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}  
 @font-face {
     font-family: Vazirmatn-Regular;
     src: url(../fonts/Vazirmatn-Regular.ttf);
     font-weight: 100px;
 }
 .container-top{
+    height: 130px;
     max-width: unset !important;
     position: fixed;
-    z-index: 999;
+    z-index: 998;
+    top: 0;
 }
 .container-top .my-row .header-top{
     width:100%;
-    height:135px;
-    background-color:var(--top-color);
+    max-height: 60px;
+    direction: rtl;
 }
 .box-right{
-    width:40%;
+    width:45%;
     height:100%;
     float:right;
 }
 .box-left{
-    width:60%;
+    width:55%;
     height:100%;
     float:right;
     display: flex;
 }
-.container-top .my-row .header-top .flex{
-    width: 100%;
-    height: 60px;
+.container-top .my-row .header-top .d-flex{
+    background-color: #fff;
 }
-.container-top .my-row .header-top .flex .box-right .logo{
+.container-top .my-row .header-top .d-flex .box-right .logo{
     float: right;
-    margin-top: 3%;
-    margin-right: 22%;
+    padding-right: 22%;
 }
-.container-top .my-row .header-top .flex .box-left .header-menu{
-    width: 600px;
+.container-top .my-row .header-top .d-flex .box-left{
+    flex-grow: 1;
+    max-width: 100%;
     height: 100%;
 }
-.container-top .my-row .header-top .flex .box-left .header-menu ul{
+.container-top .my-row .header-top .d-flex .box-left .header-menu .navbar-nav{
     display: flex;
     margin-top: 18px;
     justify-content: space-between;
     list-style-type: none;
+    padding-right: 0 !important;
 }
-.container-top .my-row .header-top .flex .box-left .header-menu ul li a{
+.container-top .my-row .header-top .d-flex .box-left .header-menu .navbar-nav .nav-item .nav-link{
     color: #545454;
     font-size: 15px;
 }
-.container-top .my-row .header-top .flex .box-left .header-menu ul li a:hover{
+.container-top .my-row .header-top .d-flex .box-left .header-menu .navbar-nav .nav-item .nav-link:hover{
     text-decoration: none;
     color: #FF5C29;
 }
-.container-top .my-row .header-top .flex .box-left .header-button{
+.container-top .my-row .header-top .d-flex .header-button{
     width: 130px;
     height: 40px;
     text-decoration: none;
     background: linear-gradient(91deg,#f73,#ff5722 50%,#e54917);
-    margin-right: 15px;
-    margin-top: 12px;
     border-radius: 25px;
+    margin-left: 13%;
 }
-.container-top .my-row .header-top .flex .box-left .header-button:hover{
+.container-top .my-row .header-top .d-flex .header-button:hover{
     background: #CE4316;
     cursor: pointer;
 }
-.container-top .my-row .header-top .flex .box-left .header-button a{
+.container-top .my-row .header-top .d-flex .header-button .header-button-b{
     position: relative;
     top: 9px;
-    left: 30px;
+    left: 30px;    
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+.container-top .my-row .header-top .d-flex .box-left .header-menu .navbar-nav .header-button{
+    width: 130px;
+    height: 40px;
+    text-decoration: none;
+    background: linear-gradient(91deg,#f73,#ff5722 50%,#e54917);
+    border-radius: 25px;
+    margin-left: 13%;
+}
+.container-top .my-row .header-top .d-flex .box-left .header-menu .navbar-nav .header-button:hover{
+    background: #CE4316;
+    cursor: pointer;
+}
+.container-top .my-row .header-top .d-flex .box-left .header-menu .navbar-nav .header-button a{
+    position: relative;
+    top: 9px;
+    right: 30px;
     font-size: 15px;
     color: #fff;
     text-decoration: none;
 }
 .container-top .my-row .header-top .header-banner{
     width: 100%;
-    min-height: 75px;
+    height: 75px;
     background-image: url(../images/header-banner-desktop.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -95,40 +121,55 @@ body{
 .container-top .my-row .header-top .header-banner:hover{
     cursor: pointer;
 }
-.container-slider .my-row .slider{
-    width: 100%;
+.container-slider{
     height: 600px;
-    margin-top: 135px;
-    z-index: 0;
-    padding: 0;
+    margin-top: 160px !important;
+    display: block;
+}
+.container-slider .slider{
+    width: 100%;
+    height: 100%;
     background: linear-gradient(#fff,#f5f7f7);
 }
-.container-slider .my-row .slider .side-right{
+.container-slider .slider .my-row-one{
+    width: 100%;
+    height: 550px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+}
+.container-slider .slider .my-row-one .side-right{
     width: 50%;
     height: 100%;
     float: right;
+    display: flex;
+    flex-direction: column;
+    order: 1;
 }
-.container-slider .my-row .slider .side-left{
+.container-slider .slider .my-row-one .side-left{
     width: 50%;
     height: 100%;
     float: right;
+    order: 2;
 }
-.container-slider .my-row .slider .side-right .text{
-    margin-top: 25%;
+.container-slider .slider .my-row-one .side-right .text{
+    margin-top: 20%;
     margin-right: 19%;
     text-align: right;
 }
-.container-slider .my-row .slider .side-right .text h1{
+.container-slider .slider .my-row-one .side-right .text h1{
     font-size: 48px;
     font-weight: 600;
 }
-.container-slider .my-row .slider .side-right .slider-button{
+.container-slider .slider .my-row-one .slider-button{
     display: flex;
     gap: 8px;
     margin-top: 5%;
     margin-right: 19%;
 }
-.container-slider .my-row .slider .side-right .slider-button a:nth-child(1){
+.container-slider .slider .my-row-one .slider-button a:nth-child(1){
     border-radius: 50px;
     font-size: 18px;
     font-weight: 500;
@@ -137,11 +178,11 @@ body{
     color: #fff;
     background: #000;
 }
-.container-slider .my-row .slider .side-right .slider-button a:nth-child(1):hover{
+.container-slider .slider .my-row-one .slider-button a:nth-child(1):hover{
     background: #323333;
     text-decoration: none;
 }
-.container-slider .my-row .slider .side-right .slider-button a:nth-child(2){
+.container-slider .slider .my-row-one .slider-button a:nth-child(2){
     border-radius: 50px;
     font-size: 18px;
     font-weight: 500;
@@ -152,191 +193,198 @@ body{
     color: #000;
     text-decoration: none;
 }
-.container-slider .my-row .slider .side-left .image-slider{
+.container-slider .slider .my-row-one .side-left .image-slider{
     width: 577px;
     height: 449px;
     background-image: url(../images/hero.webp);
     background-size: cover;
     border-radius: 40px;
     box-shadow: 0 0 16px 0 rgba(0, 0, 0, .12);
-    margin-top: 10%;
 }
-.container-services .my-row .services{
+.container-services .services .my-row-one{
     width: 100%;
-    height: 785px;
+    height: 300px;
     padding: 0;
 }
-.container-services .my-row .services .header-services{
+.container-services .services .my-row-one .header-services{
     width: 90%;
     height: 50px;
     margin-top: 4%;
     margin-right: 10%;
 }
-.container-services .my-row .services .header-services h1{
+.container-services .services .my-row-one .header-services h1{
     float: right;
     font-size: 35px;
     font-weight: 700;
 }
-.container-services .my-row .services .content-services{
-    width: 71%;
+.container-services .services .my-row-one .content-services-main{
+    width: 100%;
     height: 150px;
-    margin-top: 5%;
-    margin-right: 15%;
-    margin-left: 14%;
+    margin-top: 3%;
     display: flex;
-    gap: 65px;
+    justify-content: center;
 }
-.container-services .my-row .services .content-services .classic{
+.container-services .services .my-row-one .content-services-main .content-services{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    gap: 63px;
+    direction: rtl;
+}
+.container-services .services .my-row-one .content-services-main .content-services .classic{
     width: 125px;
     height: 125px;
     border: none;
     outline: none;
     background: transparent;
 }
-.container-services .my-row .services .content-services .classic .classic-picture{
+.container-services .services .my-row-one .content-services-main .content-services .classic .classic-picture{
     width: 95px;
     height: 95px;
 }
-.container-services .my-row .services .content-services .classic span{
+.container-services .services .my-row-one .content-services-main .content-services .classic span{
     text-decoration: none;
     color: #000;
     font-size: 16px;
     font-weight: 500;
 }
-.container-services .my-row .services .content-services .traveler{
+.container-services .services .my-row-one .content-services-main .content-services .traveler{
     width: 125px;
     height: 125px;
     border: none;
     outline: none;
     background: transparent;
 }
-.container-services .my-row .services .content-services .traveler .traveler-picture{
+.container-services .services .my-row-one .content-services-main .content-services .traveler .traveler-picture{
     width: 95px;
     height: 95px;
 }
-.container-services .my-row .services .content-services .traveler span{
+.container-services .services .my-row-one .content-services-main .content-services .traveler span{
     text-decoration: none;
     color: #000;
     font-size: 16px;
     font-weight: 500;
 }
-.container-services .my-row .services .content-services .package{
+.container-services .services .my-row-one .content-services-main .content-services .package{
     width: 125px;
     height: 125px;
     border: none;
     outline: none;
     background: transparent;
 }
-.container-services .my-row .services .content-services .package .package-picture{
+.container-services .services .my-row-one .content-services-main .content-services .package .package-picture{
     width: 95px;
     height: 95px;
 }
-.container-services .my-row .services .content-services .package span{
+.container-services .services .my-row-one .content-services-main .content-services .package span{
     text-decoration: none;
     color: #000;
     font-size: 16px;
     font-weight: 500;
 }
-.container-services .my-row .services .content-services .phone{
+.container-services .services .my-row-one .content-services-main .content-services .phone{
     width: 125px;
     height: 125px;
     border: none;
     outline: none;
     background: transparent;
 }
-.container-services .my-row .services .content-services .phone .phone-picture{
+.container-services .services .my-row-one .content-services-main .content-services .phone .phone-picture{
     width: 95px;
     height: 95px;
 }
-.container-services .my-row .services .content-services .phone span{
+.container-services .services .my-row-one .content-services-main .content-services .phone span{
     text-decoration: none;
     color: #000;
     font-size: 16px;
     font-weight: 500;
 }
-.container-services .my-row .services .content-services .Plus{
+.container-services .services .my-row-one  .content-services-main .content-services .Plus{
     width: 125px;
     height: 125px;
     border: none;
     outline: none;
     background: transparent;
 }
-.container-services .my-row .services .content-services .Plus .Plus-picture{
+.container-services .services .my-row-one .content-services-main .content-services .Plus .Plus-picture{
     width: 95px;
     height: 95px;
 }
-.container-services .my-row .services .content-services .Plus span{
+.container-services .services .my-row-one .content-services-main .content-services .Plus span{
     text-decoration: none;
     color: #000;
     font-size: 16px;
     font-weight: 500;
 }
-.container-services .my-row .services .content-services .intercity{
+.container-services .services .my-row-one .content-services-main .content-services .intercity{
     width: 125px;
     height: 125px;
     border: none;
     outline: none;
     background: transparent;
 }
-.container-services .my-row .services .content-services .intercity .intercity-picture{
+.container-services .services .my-row-one .content-services-main .content-services .intercity .intercity-picture{
     width: 95px;
     height: 95px;
 }
-.container-services .my-row .services .content-services .intercity span{
+.container-services .services .my-row-one .content-services-main .content-services .intercity span{
     text-decoration: none;
     color: #000;
     font-size: 16px;
     font-weight: 500;
 }
-.container-services .my-row .services .tapcontent{
+.container-services .services .my-row-two .tapcontent{
     width: 76%;
-    height: 400px;
+    height: auto;
     margin-top: 3%;
     margin-right: 12%;
     margin-left: 12%;
+    direction: rtl;
 }
 .tapcontent .side-right ,.side-left{
     width: 50%;
     height: 100%;
-    float: right;
 }
-.container-services .my-row .services .tapcontent .side-right .text-tapcontent{
+.container-services .services .my-row-two .tapcontent .side-right .text-tapcontent{
     margin-top: 5%;
 }
-.container-services .my-row .services .tapcontent .side-right .text-tapcontent h3{
+.container-services .services .my-row-two .tapcontent .side-right .text-tapcontent h3{
     color: #141414;
     font-size: 28px;
     font-weight: 600;
     text-align: right;
     margin-bottom: 20px;
 }
-.container-services .my-row .services .tapcontent .side-right .text-tapcontent p{
+.container-services .services .my-row-two .tapcontent .side-right .text-tapcontent p{
     color: #333;
     font-size: 18px;
     line-height: 32px;
     text-align: right;
 }
-.container-services .my-row .services .tapcontent .side-left .classic-image img{
+.container-services .services .my-row-two .tapcontent .side-left{
+    justify-content: center;
+}
+.container-services .services .my-row-two .tapcontent .side-left .classic-image img{
+    width: 450px;
+    height: 350px;
+}
+.container-services .services .my-row-two .tapcontent .side-left .traveler-image img{
     width: 500px;
     height: 400px;
 }
-.container-services .my-row .services .tapcontent .side-left .traveler-image img{
+.container-services .services .my-row-two .tapcontent .side-left .package-image img{
     width: 500px;
     height: 400px;
 }
-.container-services .my-row .services .tapcontent .side-left .package-image img{
+.container-services .services .my-row-two .tapcontent .side-left .phone-image img{
     width: 500px;
     height: 400px;
 }
-.container-services .my-row .services .tapcontent .side-left .phone-image img{
+.container-services .services .my-row-two .tapcontent .side-left .plus-image img{
     width: 500px;
     height: 400px;
 }
-.container-services .my-row .services .tapcontent .side-left .plus-image img{
-    width: 500px;
-    height: 400px;
-}
-.container-services .my-row .services .tapcontent .side-left .intercity-image img{
+.container-services .services .my-row-two .tapcontent .side-left .intercity-image img{
     width: 500px;
     height: 400px;
 }
@@ -344,23 +392,19 @@ body{
     width: 100%;
     height: 480px;
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10%;
+    direction: rtl;
 }
 .registration .side-right ,.side-left{
     width: 50%;
     height: 100%;
-    float: right;
     display: flex;
-    justify-content:space-around
+    justify-content:space-around;
+    margin-top: 5%;
 }
-.container-registration .my-row .registration .side-right .image-registration{
-    width: 547px;
+.container-registration .my-row .registration .side-right .image-registration img{
+    width: 100%;
     height: 395px;
-    background: url(../images/section-driver.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin: auto;
 }
 .container-registration .my-row .registration .side-left .text-registration h2{
     color: #141414;
@@ -403,32 +447,25 @@ body{
     color: #000;
     position: relative;
     top: 3px;
-    right: 40px;
+    right: 30px;
 }
 .container-Businesses .my-row .Businesses{
     width: 100%;
-    height: 480px;
+    height: auto;
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10%;
+    direction: rtl;
 }
 .Businesses .side-right ,.side-left{
     width: 50%;
     height: 100%;
-    float: right;
     display: flex;
     justify-content:space-around;
-}
-.container-Businesses .my-row .Businesses .side-left .image-Businesses{
-    width: 547px;
-    height: 395px;
-    background: url(../images/section-corporate.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.container-Businesses .my-row .Businesses .side-right .text-Businesses{
     margin-top: 5%;
+}
+.container-Businesses .my-row .Businesses .side-left .image-Businesses img{
+    width: 100%;
+    height: 395px;
+    margin: auto;
 }
 .container-Businesses .my-row .Businesses .side-right .text-Businesses h2{
     color: #141414;
@@ -477,89 +514,86 @@ body{
     top: 3px;
     right: 40px;
 }
-.container-installation .my-row .installation{
-    width: 100%;
-    height: 480px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 6%;
-    display: flex;
+.container-installation .my-row{
+    justify-content: center;
 }
-.container-installation .my-row .installation .said-right{
-    width: 665px;
-    height: 380px;
-    float: right;
+.container-installation .my-row .installation{
+    width: 85%;
+    height: auto;
+    display: flex;
+    direction: rtl;
+    justify-content: center;
+}
+.container-installation .my-row .installation .side-right{
+    width: 690px;
+    height: auto;
     background-color: #FCF0EA;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     display: flex;
     justify-content:space-around;
+    margin-top: 8%;
 }
-.container-installation .my-row .installation .said-right .text-installation{
-    margin-top: 10%;
+.container-installation .my-row .installation .side-right .text-installation{
+    padding: 64px 64px 64px 0;
 }
-.container-installation .my-row .installation .said-right .text-installation h2{
+.container-installation .my-row .installation .side-right .text-installation h2{
     color: #141414;
     font-size: 32px;
     font-weight: 600;
     line-height: 48px;
     text-align: right;
 }
-.container-installation .my-row .installation .said-right .text-installation .description{
+.container-installation .my-row .installation .side-right .text-installation .description{
     color: #333;
     font-size: 18px;
     font-weight: 400;
     line-height: 32px;
     text-align: right;
-    margin-bottom: 15%;
 }
-.container-installation .my-row .installation .said-right .text-installation .button-installation{
+.container-installation .my-row .installation .side-right .text-installation .button-installation{
     float: right;
-    margin-top: 15px;
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
-.container-installation .my-row .installation .said-right .text-installation .button-installation a:nth-child(1){
+.container-installation .my-row .installation .side-right .text-installation .button-installation a:nth-child(1){
     border-radius: 50px;
     font-size: 15px;
     font-weight: 500;
-    padding: 15px 35px;
+    padding: 13px 30px;
     color: #fff;
     background: linear-gradient(91deg,#f73,#ff5722 50%,#e54917);
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
 }
-.container-installation .my-row .installation .said-right .text-installation .button-installation a:nth-child(1):hover{
+.container-installation .my-row .installation .side-right .text-installation .button-installation a:nth-child(1):hover{
     background: #CE4316;
 }
-.container-installation .my-row .installation .said-right .text-installation .button-installation a:nth-child(2){
+.container-installation .my-row .installation .side-right .text-installation .button-installation a:nth-child(2){
     border-radius: 50px;
     font-size: 15px;
     font-weight: 500;
-    padding: 15px 35px;
+    padding: 13px 26px;
     color: #000;
     background: #fff;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
 }
-.container-installation .my-row .installation .said-right .text-installation .button-installation a:nth-child(2):hover{
+.container-installation .my-row .installation .side-right .text-installation .button-installation a:nth-child(2):hover{
     background: #DFDFDF;
 }
-.container-installation .my-row .installation .said-left{
-    width: 520px;
-    height: 380px;
-    float: right;
+.container-installation .my-row .installation .side-left{
+    width: 545px;
+    height: auto;
     display: flex;
     justify-content:space-around;
+    margin-top: 8%;
 }
-.container-installation .my-row .installation .said-left .image-installation{
+.container-installation .my-row .installation .side-left .image-installation img{
     width: 100%;
     height: 100%;
-    background: url(../images/section-install.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: #FCF0EA;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
@@ -567,11 +601,6 @@ body{
 .container-blog .my-row .blog{
     width: 100%;
     height: 580px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5%;
-    margin-bottom: 6%;
-
 }
 .container-blog .my-row .blog .header-blog h2{
     color: #000;
@@ -587,7 +616,7 @@ body{
     display: flex;
     margin-top: 5%;
     gap: 25px;
-    justify-content: space-between;
+    justify-content: center;
 }
 .container-blog .my-row .blog .posts-blog .blog-part-one ,.blog-part-two ,.blog-part-three{
     width: 30%;
@@ -940,3 +969,335 @@ body{
 .container-footer .my-row .tapsi-footer .footer-social .social-links .fa-telegram:hover{
     color: #FB8121;
 }
+    @media screen and (max-width: 992px){
+        .container-blog .my-row .blog .posts-blog{
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: 992px){
+        .container-footer .my-row .tapsi-footer .main-footer{
+            width: 100%;
+            display: block;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container-slider{
+        height: auto;
+        }  
+        .container-slider .slider {
+        height: auto;
+        margin-top: 80px;
+        padding: 20px 0;
+        }
+        .container-slider .slider .my-row-one {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        text-align: center;
+        direction: rtl;
+        }
+        .container-slider .slider .my-row-one .side-right,
+        .container-slider .slider .my-row-one .side-left {
+        width: 100%;
+        height: auto;
+        float: none;
+        order: unset;
+        }
+        .container-slider .slider .my-row-one .side-right .text {
+        margin: 0 10% 20px 10%;
+        text-align: center;
+        }
+        .container-slider .slider .my-row-one .side-right .text h1 {
+        font-size: 32px;
+        }
+        .container-slider .slider .my-row-one .slider-button {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0 0 0;
+        }
+        .container-slider .slider .my-row-one .slider-button a {
+        width: 80%;
+        text-align: center;
+        }
+        .container-slider .slider .my-row-one .side-left .image-slider {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 1.3/1;
+        margin: 20px 0;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        }
+    }
+  
+    @media screen and (max-width: 768px){
+        .container-services .services .my-row-one .content-services-main .content-services{
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        .container-services .services .my-row-one .header-services h1{
+            float: right;
+            font-size: 25px;
+            font-weight: 700;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .tapcontent {
+            flex-direction: column-reverse !important;
+            height: auto;
+        }
+
+        .tapcontent .side-right,
+        .tapcontent .side-left {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+
+        .tapcontent .side-left img {
+            width: 100%;
+            height: auto;
+            max-width: 450px;
+            max-height: 350px;
+        }
+
+        .container-services .services .my-row-two .tapcontent .side-right .text-tapcontent h3{
+            font-size: 20px;
+            text-align: right;
+        }
+
+        .container-services .services .my-row-two .tapcontent .side-right .text-tapcontent p{
+            font-size: 15px;
+        }
+    }
+    @media (max-width: 768px) {
+        .registration {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container-registration .my-row .registration{
+            width: 100%;
+            height: auto;
+            display: flex;
+            direction: rtl;
+        }
+
+        .registration .side-right,
+        .registration .side-left {
+            width: 100%;
+            height: auto;
+            float: none;
+            justify-content: flex-start;
+            margin: 0 !important;
+        }
+
+        .container-registration .my-row .registration .side-right .image-registration img{
+            width: 100%;
+            height: auto;
+            aspect-ratio: 14 / 9;
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container-registration .my-row .registration .side-left .text-registration {
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .container-registration .my-row .registration .side-left .text-registration h2{
+            color: #141414;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 48px;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+
+        .container-registration .my-row .registration .side-left .text-registration .description{
+            color: #333;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: right;
+            margin-bottom: 10%;
+        }
+
+        .container-registration .my-row .registration .side-left .text-registration .description ul{
+            padding-right: 15px !important;    
+        }
+
+        .container-registration .my-row .registration .side-left .text-registration .button-registration {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .container-registration .my-row .registration .side-left .text-registration .button-registration a:nth-child(1){
+            padding: 10px 24px;
+            font-size: 14px;
+        }
+
+        .container-registration .my-row .registration .side-left .text-registration .button-registration a:nth-child(2),
+        .container-registration .my-row .registration .side-left .text-registration .button-registration i {
+            position: static;
+            padding: 10px 24px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .container-registration .my-row .registration .side-left .text-registration .button-registration {
+            display: flex;
+            flex-direction: column; 
+            gap: 10px;
+            align-items: flex-start;
+        }
+    }
+  
+
+    @media (max-width: 768px) {
+        .Businesses {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .Businesses .side-left {
+            order: 1;
+            width: 100%;
+            margin: 0 !important;
+        }
+
+        .Businesses .side-right {
+            order: 2;
+            width: 100%;
+            margin: 0 !important;
+            justify-content: flex-start;
+        }       
+
+        .container-Businesses .my-row .Businesses .side-left .image-Businesses img{
+            width: 100%;
+            height: auto;
+            aspect-ratio: 14 / 9;
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container-Businesses .my-row .Businesses .side-right .text-Businesses {
+            width: 100%;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        .container-Businesses .my-row .Businesses .side-right .text-Businesses h2{
+            color: #141414;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 48px;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+
+        .container-Businesses .my-row .Businesses .side-right .text-Businesses .description{
+            color: #333;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: right;
+            margin-bottom: 10%;
+        }
+
+        .container-Businesses .my-row .Businesses .side-right .text-Businesses .button-Businesses {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .container-Businesses .my-row .Businesses .side-right .text-Businesses .button-Businesses a:nth-child(1){
+            padding: 10px 24px;
+            font-size: 14px;
+        }
+
+        .container-Businesses .my-row .Businesses .side-right .text-Businesses .button-Businesses a:nth-child(2),
+        .container-Businesses .my-row .Businesses .side-right .text-Businesses .button-Businesses i {
+            position: static;
+            padding: 10px 24px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .container-Businesses .my-row .Businesses .side-right .text-Businesses .button-Businesses {
+            display: flex;
+            flex-direction: column; 
+            gap: 10px;
+            align-items: flex-start;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container-installation .my-row .installation {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .container-installation .my-row .installation .side-right,
+        .container-installation .my-row .installation .side-left {
+            width: 90%;
+            margin-top: 4%;
+            border-radius: 30px !important;
+        }
+
+        .container-installation .my-row .installation .side-left .image-installation img {
+            border-radius: 30px;
+        }
+
+        .container-installation .my-row .installation .side-right .text-installation {
+            padding: 32px;
+        }
+
+        .container-installation .my-row .installation .side-right .text-installation h2,
+        .container-installation .my-row .installation .side-right .text-installation .description,
+        .container-installation .my-row .installation .side-right .text-installation .button-installation {
+            text-align: center;
+            float: none;
+            justify-content: center;
+        }
+
+        .container-installation .my-row .installation .side-right .text-installation .button-installation {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container-installation .my-row .installation .side-right .text-installation .button-installation a {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .container-installation .my-row .installation .side-right .text-installation .button-installation {
+            display: flex;
+            flex-direction: column; 
+            gap: 10px;
+            align-items: flex-start;
+        }
+    }
