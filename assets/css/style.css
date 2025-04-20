@@ -173,7 +173,7 @@ body{
     border-radius: 50px;
     font-size: 18px;
     font-weight: 500;
-    height: 68px;
+    height: auto;
     padding: 19px 32px;
     color: #fff;
     background: #000;
@@ -186,7 +186,7 @@ body{
     border-radius: 50px;
     font-size: 18px;
     font-weight: 500;
-    height: 68px;
+    height: auto;
     padding: 19px 32px;
     color: #000;
     border: 2px solid #000;
@@ -600,7 +600,8 @@ body{
 }
 .container-blog .my-row .blog{
     width: 100%;
-    height: 580px;
+    height: auto;
+    padding: 8% 10%;;
 }
 .container-blog .my-row .blog .header-blog h2{
     color: #000;
@@ -615,8 +616,9 @@ body{
     height: 100%;
     display: flex;
     margin-top: 5%;
-    gap: 25px;
+    gap: 12px;
     justify-content: center;
+    direction: rtl;
 }
 .container-blog .my-row .blog .posts-blog .blog-part-one ,.blog-part-two ,.blog-part-three{
     width: 30%;
@@ -624,17 +626,15 @@ body{
 }
 .container-blog .my-row .blog .posts-blog .blog-part-one{
     width: 400px;
-    height: 455px;
+    height: 500px;
     transition: 0.5s;
 }
 .container-blog .my-row .blog .posts-blog .blog-part-one:hover{
     box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
 }
-.container-blog .my-row .blog .posts-blog .blog-part-one .image-part-one{
+.container-blog .my-row .blog .posts-blog .blog-part-one .image-part-one img{
     width: 350px;
     height: 235px;
-    background: url(../images/part-one.jpeg);
-    background-size: cover;
     border-radius: 12px;
     margin: 25px;
 }
@@ -655,17 +655,15 @@ body{
 }
 .container-blog .my-row .blog .posts-blog .blog-part-two{
     width: 400px;
-    height: 455px;
+    height: 500px;
     transition: 0.5s;
 }
 .container-blog .my-row .blog .posts-blog .blog-part-two:hover{
     box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
 }
-.container-blog .my-row .blog .posts-blog .blog-part-two .image-part-two{
+.container-blog .my-row .blog .posts-blog .blog-part-two .image-part-two img{
     width: 350px;
     height: 235px;
-    background: url(../images/car-care-checking-tire-pressure-aaa_100442228_l-2.jpg);
-    background-size: cover;
     border-radius: 12px;
     margin: 25px;
 }
@@ -686,17 +684,15 @@ body{
 }
 .container-blog .my-row .blog .posts-blog .blog-part-three{
     width: 400px;
-    height: 455px;
+    height: 500px;
     transition: 0.5s;
 }
 .container-blog .my-row .blog .posts-blog .blog-part-three:hover{
     box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
 }
-.container-blog .my-row .blog .posts-blog .blog-part-three .image-part-three{
+.container-blog .my-row .blog .posts-blog .blog-part-three .image-part-three img{
     width: 350px;
     height: 235px;
-    background: url(../images/hush-naidoo-jade-photography-khyXa-tNTtU-unsplash.jpg);
-    background-size: cover;
     border-radius: 12px;
     margin: 25px;
 }
@@ -717,19 +713,20 @@ body{
 }
 .container-footer .my-row .tapsi-footer{
     width: 100%;
-    height: 455px;
+    height: auto;
     padding: 5% 8%;
     background-color: #000;
+    direction: rtl;
 }
 .container-footer .my-row .tapsi-footer .main-footer{
     width: 100%;
     height: 250px;
     display: flex;
-    gap: 15px;
+    gap: 9px;
 }
 .container-footer .my-row .tapsi-footer .main-footer .footer-part-one{
     width: 205px;
-    height: 225px;
+    height: auto;
     text-align: right;
 }
 .container-footer .my-row .tapsi-footer .main-footer .footer-part-one .logo{
@@ -759,7 +756,7 @@ body{
 }
 .container-footer .my-row .tapsi-footer .main-footer .footer-part-two{
     width: 185px;
-    height: 225px;
+    height: auto;
     text-align: right;
 }
 .container-footer .my-row .tapsi-footer .main-footer .footer-part-two .tapsi{
@@ -784,7 +781,7 @@ body{
 }
 .container-footer .my-row .tapsi-footer .main-footer .footer-part-three{
     width: 185px;
-    height: 225px;
+    height: auto;
     text-align: right;
 }
 .container-footer .my-row .tapsi-footer .main-footer .footer-part-three .passengers{
@@ -809,7 +806,7 @@ body{
 }
 .container-footer .my-row .tapsi-footer .main-footer .footer-part-four{
     width: 185px;
-    height: 225px;
+    height: auto;
     text-align: right;
 }
 .container-footer .my-row .tapsi-footer .main-footer .footer-part-four .drivers{
@@ -834,26 +831,26 @@ body{
 }
 .container-footer .my-row .tapsi-footer .main-footer .footer-part-five{
     width: 185px;
-    height: 225px;
+    height: auto;
     text-align: right;
 }
-.container-footer .my-row .tapsi-footer .main-footer .footer-part-five .businesses{
+.container-footer .my-row .tapsi-footer .main-footer .footer-part-five .businesse{
     display: flex;
     flex-direction: column;
 }
-.container-footer .my-row .tapsi-footer .main-footer .footer-part-five .businesses h6{
+.container-footer .my-row .tapsi-footer .main-footer .footer-part-five .businesse h6{
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 15px;
     color: #fff;
 }
-.container-footer .my-row .tapsi-footer .main-footer .footer-part-five .businesses a{
+.container-footer .my-row .tapsi-footer .main-footer .footer-part-five .businesse a{
     font-size: 14px;
     line-height: 30px;
     text-decoration: none;
     color: #fff;
 }
-.container-footer .my-row .tapsi-footer .main-footer .footer-part-five .businesses a:hover{
+.container-footer .my-row .tapsi-footer .main-footer .footer-part-five .businesse a:hover{
     color: #ff5722;
     cursor: pointer;
 }
@@ -874,11 +871,9 @@ body{
     border-radius: 12px;
     margin-left: 10px;
 }
-.container-footer .my-row .tapsi-footer .main-footer .footer-part-six .trust .trust-col-one .image-one{
+.container-footer .my-row .tapsi-footer .main-footer .footer-part-six .trust .trust-col-one .image-one img{
     width: 78px;
     height: 82px;
-    background: url(../images/etehadiye.png);
-    background-size: cover;
     position: relative;
     top: 65px;
 }
@@ -889,11 +884,9 @@ body{
     border-radius: 12px;
     margin-left: 10px;
 }
-.container-footer .my-row .tapsi-footer .main-footer .footer-part-six .trust .trust-col-two .image-two{
+.container-footer .my-row .tapsi-footer .main-footer .footer-part-six .trust .trust-col-two .image-two img{
     width: 100%;
     height: 100px;
-    background: url(../images/نشان\ ملی.jpg);
-    background-size: cover;
     position: relative;
     top: 55px;
 }
@@ -907,14 +900,15 @@ body{
 .container-footer .my-row .tapsi-footer .main-footer .footer-part-six .trust .trust-col-three .image-three{
     width: 100%;
     height: 135px;
-    background: url(../images/ENAMADpng.parspng.com_.png);
-    background-size: cover;
     position: relative;
     top: 45px;
 }
 .container-footer .my-row .tapsi-footer .footer-social{
     width: 100%;
     height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .container-footer .my-row .tapsi-footer .footer-social h3{
     font-size: 14px;
@@ -969,20 +963,8 @@ body{
 .container-footer .my-row .tapsi-footer .footer-social .social-links .fa-telegram:hover{
     color: #FB8121;
 }
-    @media screen and (max-width: 992px){
-        .container-blog .my-row .blog .posts-blog{
-            width: 100%;
-            display: block;
-            margin-bottom: 20px;
-        }
-    }
 
-    @media screen and (max-width: 992px){
-        .container-footer .my-row .tapsi-footer .main-footer{
-            width: 100%;
-            display: block;
-        }
-    }
+/* media query */
 
     @media (max-width: 768px) {
         .container-slider{
@@ -1034,7 +1016,7 @@ body{
         }
     }
   
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 1200px){
         .container-services .services .my-row-one .content-services-main .content-services{
             width: 100%;
             overflow-x: auto;
@@ -1301,3 +1283,143 @@ body{
             align-items: flex-start;
         }
     }
+
+    @media screen and (max-width: 768px){
+        .container-blog .my-row .blog .posts-blog{
+            width: 100%;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .blog-part-one,
+        .blog-part-two,
+        .blog-part-three {
+            margin: 0 auto 20px auto;
+        }
+
+        .container-blog .my-row .blog .header-blog h2{
+            text-align: center;
+        }
+
+        .container-blog .my-row .blog .posts-blog .blog-part-one .image-part-one img{
+            width: 350px;
+            height: auto;
+            border-radius: 12px;
+            margin: 25px;
+        }
+        .container-blog .my-row .blog .posts-blog .blog-part-two .image-part-two img{
+            width: 350px;
+            height: auto;
+            border-radius: 12px;
+            margin: 25px;
+        }
+        .container-blog .my-row .blog .posts-blog .blog-part-three .image-part-three img{
+            width: 350px;
+            height: auto;
+            border-radius: 12px;
+            margin: 25px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .container-blog .my-row .blog{
+            padding: 8% 4%;
+        }
+
+        .container-blog .my-row .blog .posts-blog {
+          justify-content: center;
+        }
+      
+        .blog-part-one,
+        .blog-part-two,
+        .blog-part-three {
+          max-width: 320px !important;
+          max-height: 480px !important;
+          margin-bottom: 20px;
+        }
+      
+        .blog-part-one img,
+        .blog-part-two img,
+        .blog-part-three img {
+          width: 90% !important;
+          margin: 10px 0px 10px 13px!important;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .container-footer .my-row .tapsi-footer{
+            padding: 5% 0% 0% 0% !important;
+        }
+        .container-footer .my-row .tapsi-footer .main-footer {
+            flex-direction: column;
+            align-items: center;
+            height: auto; 
+        }
+      
+        .container-footer .my-row .tapsi-footer .main-footer > div {
+            width: 90% !important;
+            margin-bottom: 20px; 
+        }
+      
+        .container-footer .my-row .tapsi-footer {
+            height: auto;
+        }
+
+        .container-footer .my-row .tapsi-footer .main-footer .footer-part-six {
+            max-height: 130px !important;
+        }
+
+        .container-footer .my-row .tapsi-footer .main-footer .footer-part-six .trust .trust-col-one .image-one img{
+            top: 25px !important;
+        }
+
+        .container-footer .my-row .tapsi-footer .main-footer .footer-part-six .trust .trust-col-two .image-two img{
+            top: 15px !important;
+        }
+
+        .container-footer .my-row .tapsi-footer .main-footer .footer-part-six .trust .trust-col-three .image-three img{
+            position: relative;
+            bottom: 45px !important;
+        }
+
+        .container-footer .my-row .tapsi-footer .main-footer .footer-part-six .trust{
+            justify-content: space-between;
+        }
+
+        .container-footer .my-row .tapsi-footer .footer-social .social-links{
+            justify-content: space-evenly !important;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .container-footer .my-row .tapsi-footer{
+            height: auto;
+        }
+
+        .container-footer .my-row .tapsi-footer .main-footer {
+            flex-wrap: wrap;
+            height: auto;
+        }
+      
+        .container-footer .my-row .tapsi-footer .main-footer .footer-part-six {
+            order: 6;
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+      
+        .container-footer .my-row .tapsi-footer .footer-social {
+            align-items: center;
+            margin-top: 20px;
+        }
+      
+        .container-footer .my-row .tapsi-footer .footer-social h3 {
+            margin-left: auto;
+            margin-right: 0;
+        }
+      
+        .container-footer .my-row .tapsi-footer .main-footer > div {
+            margin-bottom: 20px;
+        }
+      }
